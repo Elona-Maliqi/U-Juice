@@ -1,7 +1,9 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useLanguage } from "../LanguageContext";
+// Remove useLanguage if not used
+// import { useLanguage } from "../LanguageContext";
 
+// navLinks is used, keep it
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
@@ -11,15 +13,17 @@ const navLinks = [
   { to: "/contact", label: "Contact" },
 ];
 
-const languages = [
-  { code: "en", short: "EN", label: "English" },
-  { code: "de", short: "DE", label: "Deutsch" },
-  { code: "fr", short: "FR", label: "Français" },
-];
+// Remove languages if not used
+// const languages = [
+//   { code: "en", short: "EN", label: "English" },
+//   { code: "de", short: "DE", label: "Deutsch" },
+//   { code: "fr", short: "FR", label: "Français" },
+// ];
 
 export default function Header() {
   const location = useLocation();
-  const { lang, setLang } = useLanguage();
+  // Remove unused useLanguage if not used
+  // const { lang, setLang } = useLanguage();
 
   return (
     <header className="uj-header">
@@ -44,7 +48,6 @@ export default function Header() {
             </Link>
             ))}
         </nav>
-      
     </header>
   );
 }
